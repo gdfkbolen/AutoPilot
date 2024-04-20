@@ -23,8 +23,6 @@ while ([string]::IsNullOrWhiteSpace($DeviceType)) {
 
 $grouptag = $Brand+$StoreLocation+$DeviceType
 
-
-Read-Host 
 $devicename = Read-Host -Prompt "Enter the desired Computer Name - Optional, Default Value is BrandInitial-First5location-DeviceType"
 
 # Check if the computername parameter is provided
@@ -35,5 +33,5 @@ if (-not [string]::IsNullOrWhiteSpace($devicename)) {
 }
 
 Set-ExecutionPolicy Unrestricted 
-Install Get-WindowsAutoPilotInfo --Confirm:$false
-Get-WindowsAutoPilotInfo -Online -Groupgrouptag $grouptag -AssignedComputerName $computername
+Install-Script Get-WindowsAutoPilotInfo --Confirm:$false
+Get-WindowsAutoPilotInfo -Online -Groupgrouptag $grouptag
