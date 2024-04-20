@@ -33,5 +33,5 @@ if (-not [string]::IsNullOrWhiteSpace($devicename)) {
 }
 
 Set-ExecutionPolicy Unrestricted 
-Install-Script Get-WindowsAutoPilotInfo --Confirm:$false
+Install-Script Get-WindowsAutoPilotInfo
 Get-WindowsAutoPilotInfo -Online -Groupgrouptag $grouptag
